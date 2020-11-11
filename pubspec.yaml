@@ -47,16 +47,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/assets/images/mask-group-1-4.png
-    - lib/assets/images/wp3606122-ford-focus-st-wallpapers.jpg
-    - lib/assets/images/DCTLogo.png
-    - lib/assets/images/AinPalaceMuseum.png
-    - lib/assets/images/comming-soon.png
-    - lib/assets/images/under-development.png
-    - lib/assets/images/360Sample1.jpeg
-    - lib/assets/images/360Sample2.jpeg
-    - lib/assets/images/360Sample3.jpeg
-    - lib/assets/images/map.png
+    - lib/assets/images/
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
