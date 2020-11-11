@@ -1,9 +1,9 @@
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_widgets/flutter_widgets.dart';
 import 'package:flutter/widgets.dart';
 import 'package:video_player/video_player.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 //TODO --  FIX THE BACKGROUND COLOR TO BE BLACK NOT WHITE WHILE SCROLLING
 class Home extends StatefulWidget {
@@ -65,7 +65,6 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-  
         ],
       ),
     );

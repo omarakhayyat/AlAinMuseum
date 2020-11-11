@@ -9,7 +9,7 @@ import 'package:webview/Widgets/home.dart';
 import 'package:webview/main.dart';
 
 import 'Widgets/360_view.dart';
-import 'Widgets/map_tab.dart' ;
+import 'Widgets/map_tab.dart';
 import 'functions/apiLoginFunction.dart';
 import 'functions/getSavedToken.dart';
 

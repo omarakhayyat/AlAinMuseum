@@ -205,43 +205,43 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   Widget build(BuildContext context) {
     //SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Container(
-      height: MediaQuery.of(context).size.height,
-      child: SplashScreen(
-        seconds: 3,
-        navigateAfterSeconds:LoginPage(),
-        title: Text.rich(
-          TextSpan(
-            text: "Welcome to",
-            style: TextStyle(
-              color: Color.fromARGB(255, 60, 86, 100),
-              fontWeight: FontWeight.w400,
-              fontSize: 30,
-            ),
-            children: [
+          height: MediaQuery.of(context).size.height,
+          child: SplashScreen(
+            seconds: 3,
+            routeName: "/",
+            navigateAfterSeconds: LoginPage(),
+            title: Text.rich(
               TextSpan(
-                text: "\nAl Ain Palace Museum",
+                text: "Welcome to",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 233, 105, 90),
+                  color: Color.fromARGB(255, 60, 86, 100),
                   fontWeight: FontWeight.w400,
-                  fontSize: 25,
+                  fontSize: 30,
                 ),
-              )
-            ],
+                children: [
+                  TextSpan(
+                    text: "\nAl Ain Palace Museum",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 233, 105, 90),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 25,
+                    ),
+                  )
+                ],
+              ),
+              textAlign: TextAlign.center,
+            ),
+            image: Image.asset("lib/assets/images/AinPalaceMuseum.png"),
+            photoSize: MediaQuery.of(context).size.height / 4,
+            backgroundColor: Colors.white,
+            loaderColor: Colors.grey,
+            loadingText: Text(
+              'Loading',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
-          textAlign: TextAlign.center,
-        ),
-        image: Image.asset("lib/assets/images/AinPalaceMuseum.png"),
-        photoSize: MediaQuery.of(context).size.height / 4,
-        backgroundColor: Colors.white,
-        loaderColor: Colors.grey,
-        loadingText: Text(
-          'Loading',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-    ));
+        ));
   }
 }
-
-

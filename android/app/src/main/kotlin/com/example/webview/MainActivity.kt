@@ -1,4 +1,4 @@
-package com.example.webview
+package com.dctabudhabi.alAinMuseum
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

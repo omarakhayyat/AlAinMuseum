@@ -142,15 +142,17 @@ class _ExploreTabState extends State<ExploreTab> {
     //Manually operated Carousel
     final CarouselSlider manualCarouselDemo = CarouselSlider(
       items: child,
-      autoPlay: false,
-      enlargeCenterPage: true,
-      viewportFraction: 0.8,
-      height: 300,
-      onPageChanged: (index) {
-        setState(() {
-          current = index;
-        });
-      },
+      options: CarouselOptions(
+        autoPlay: false,
+        enlargeCenterPage: true,
+        viewportFraction: 0.8,
+        height: 300,
+        onPageChanged: (index, reason) {
+          setState(() {
+            current = index;
+          });
+        },
+      ),
     );
 
     return Scaffold(

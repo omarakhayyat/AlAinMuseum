@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_panorama/flutter_panorama.dart';
-import 'package:flutter_panorama/platform_interface.dart';
-import 'package:panorama/panorama.dart';
 import 'package:webview/Widgets/explore_tab.dart';
 
 final List<String> imgList = [
@@ -41,9 +39,11 @@ class _View360State extends State<View360> {
       body: Stack(
         children: [
           FlutterPanorama.assets(
-            imgList[current],enableFullButton: true,
-            enableStereoModeButton: true,onImageLoaded: (state) {
-              print("------------------------------- ${state == 1 ? 'Loaded' : 'Failed to load1'}");
+            imgList[current], enableFullButton: true,
+            enableStereoModeButton: true,
+            onImageLoaded: (state) {
+              print(
+                  "------------------------------- ${state == 1 ? 'Loaded' : 'Failed to load1'}");
             },
             //imageType: ImageType.MEDIA_STEREO_TOP_BOTTOM,
           ),

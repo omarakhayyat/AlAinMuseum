@@ -9,7 +9,6 @@ import 'dart:convert';
 
 import 'package:webview/model/login_model.dart';
 
-
 Future<LoginModel> requestLoginAPI(
     BuildContext context, String username, String password) async {
   final url = "https://elics.tcaabudhabi.ae/els/token";
