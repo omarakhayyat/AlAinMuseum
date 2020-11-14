@@ -22,6 +22,7 @@ dependencies:
   flutter_panorama:
     git:
       url: https://github.com/lytian/flutter_panorama
+  animated_splash_screen: ^1.0.1+2
   carousel_slider: ^2.3.1
   chewie: ^0.11.0
   google_nav_bar: ^3.1.0

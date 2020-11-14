@@ -1,17 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:webview/Widgets/explore_tab.dart';
-import 'package:webview/Widgets/feedback_tap.dart';
-import 'package:webview/Widgets/home.dart';
-import 'Widgets/map_tab.dart';
+import 'package:webview/tabs/home_tap.dart';
 
-class LoginPage extends StatefulWidget {
+import 'explore_tab.dart';
+import 'feedback_tap.dart';
+import 'map_tab.dart';
+
+class NavBar extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _NavBarState createState() => _NavBarState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _NavBarState extends State<NavBar> {
   GlobalKey scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -23,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
   int _prevIndex = 0;
 
   List<Widget> _widgetOptions = <Widget>[
-    Home(),
+    HomeTap(),
     MapTab(),
     ExploreTab(),
     null,

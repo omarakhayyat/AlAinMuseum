@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_panorama/flutter_panorama.dart';
-import 'package:webview/Widgets/explore_tab.dart';
+import 'package:webview/tabs/explore_tab.dart';
 
 final List<String> imgList = [
   'lib/assets/images/360Sample1.jpeg',

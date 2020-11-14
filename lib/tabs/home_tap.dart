@@ -5,15 +5,14 @@ import 'package:flutter/widgets.dart';
 import 'package:video_player/video_player.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
-//TODO --  FIX THE BACKGROUND COLOR TO BE BLACK NOT WHITE WHILE SCROLLING
-class Home extends StatefulWidget {
-  Home({Key key}) : super(key: key);
+class HomeTap extends StatefulWidget {
+  HomeTap({Key key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  _HomeTapState createState() => _HomeTapState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeTapState extends State<HomeTap> {
   static final ScrollController scrollController = ScrollController();
   scrollListener() {
     if (scrollController.position.userScrollDirection ==
@@ -126,7 +125,8 @@ class _FlexCustomState extends State<FlexCustom> {
             key: Key('Video'),
             onVisibilityChanged: (VisibilityInfo info) {
               if (info.visibleFraction < 1 &&
-                      _HomeState.scrollController.position.userScrollDirection
+                      _HomeTapState
+                              .scrollController.position.userScrollDirection
                               .toString() ==
                           ScrollDirection.reverse.toString()
                   // &&
