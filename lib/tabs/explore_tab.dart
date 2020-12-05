@@ -106,7 +106,7 @@ class _ExploreTabState extends State<ExploreTab> {
     );
 
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: ListView(
         children: <Widget>[
           Padding(
@@ -181,7 +181,7 @@ class _ExploreTabState extends State<ExploreTab> {
               text: TextSpan(
                 text: _exploreText[current].title,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Theme.of(context).textTheme.headline5.color,
                   fontWeight: FontWeight.w400,
                   fontSize: 19,
                 ),

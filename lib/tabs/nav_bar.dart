@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:webview/tabs/home_tap.dart';
+import 'package:webview/theme/app_theme.dart';
 
 import 'explore_tab.dart';
 import 'feedback_tap.dart';
@@ -40,21 +41,25 @@ class _NavBarState extends State<NavBar> {
             ? _widgetOptions.elementAt(_prevIndex)
             : _widgetOptions.elementAt(_selectedIndex),
         bottomNavigationBar: Container(
-          decoration: BoxDecoration(color: Colors.black, boxShadow: [
-            BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1))
-          ]),
+          // decoration: BoxDecoration(
+          //   color: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+          //   // boxShadow: [BoxShadow(blurRadius: 0, color: Colors.yellow)],
+          // ),
+          color: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
           child: SafeArea(
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 1.0, vertical: 1),
               child: GNav(
                   gap: 8,
-                  activeColor: Colors.black,
+                  activeColor: Theme.of(context)
+                      .bottomNavigationBarTheme
+                      .backgroundColor, //Colors.black,
                   iconSize: 24,
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                   duration: Duration(milliseconds: 800),
-                  tabBackgroundColor: Colors.orange[800],
-                  color: Colors.orange[800],
+                  tabBackgroundColor:
+                      Theme.of(context).primaryColor, //Colors.orange[800],
+                  color: Theme.of(context).primaryColor, //Colors.orange[800],
                   tabs: [
                     GButton(
                       icon: Icons.home,

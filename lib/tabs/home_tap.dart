@@ -41,13 +41,13 @@ class _HomeTapState extends State<HomeTap> {
             expandedHeight: 350,
             floating: true,
             pinned: true,
-            backgroundColor: Colors.black87,
+            backgroundColor: Theme.of(context).appBarTheme.color,
             flexibleSpace: FlexCustom(),
           ),
           SliverToBoxAdapter(
             child: Container(
               alignment: Alignment.center,
-              color: Colors.black87,
+              color: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
@@ -232,23 +232,18 @@ class _FlexCustomState extends State<FlexCustom> {
           fit: StackFit.expand,
           alignment: Alignment.bottomRight,
           children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(30),
-                  bottomLeft: Radius.circular(30)),
-              // child: AnimatedSwitcher(
-              //   switchInCurve: Curves.fastOutSlowIn,
-              //   switchOutCurve: Curves.fastOutSlowIn,
-              //   duration: Duration(seconds: 1),
-              //   reverseDuration: Duration(seconds: 1),
-              child: isVideo
-                  ? _videoDialog()
-                  : Image.asset(
-                      "lib/assets/images/wp3606122-ford-focus-st-wallpapers.jpg",
-                      fit: BoxFit.cover,
-                    ),
-              // ),
-            ),
+            // ClipRRect(
+            //   borderRadius: BorderRadius.only(
+            //       bottomRight: Radius.circular(30),
+            //       bottomLeft: Radius.circular(30)),
+            //   child:
+            isVideo
+                ? _videoDialog()
+                : Image.asset(
+                    "lib/assets/images/wp3606122-ford-focus-st-wallpapers.jpg",
+                    fit: BoxFit.cover,
+                  ),
+            // ),
             Positioned(
               bottom: 10,
               right: MediaQuery.of(context).size.width / 12,
@@ -281,12 +276,14 @@ class _FlexCustomState extends State<FlexCustom> {
                                 ? Icon(
                                     Icons.play_circle_filled,
                                     size: 60,
-                                    color: Colors.white,
+                                    color: Theme.of(context).iconTheme.color,
+                                    // color: Colors.white,
                                   )
                                 : Icon(
                                     Icons.stop,
                                     size: 60,
-                                    color: Colors.white,
+                                    color: Theme.of(context).iconTheme.color,
+                                    // color: Colors.white,
                                   ), // icon
                             // text
                           ],
@@ -309,6 +306,7 @@ class _FlexCustomState extends State<FlexCustom> {
         ),
         title: Text(
           "   AL AIN PALACE\n   MUSEUM",
+          style: Theme.of(context).textTheme.headline6,
         ),
         titlePadding: EdgeInsets.fromLTRB(0, 0, 150, 0),
       ),
