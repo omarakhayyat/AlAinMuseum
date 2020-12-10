@@ -56,8 +56,6 @@ final List carouselChild = carouselMap<Widget>(
       child: Stack(
         children: <Widget>[
           ClipRRect(
-            //TODO -- CHECK THE IMAGE CLIP AND SIZE TO MATCH THE UI
-            //TODO -- FIX THE BUTTONS UNDERNEATH THE IMAGES
             //TODO -- ADD READ MORE INKWELL OR FLAT BUTTON
             borderRadius: BorderRadius.circular(55), //image cliprrect inside
             child: Image.network(

@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:webview/tabs/nav_bar.dart';
-import 'package:webview/theme/app_theme.dart';
-
-import 'Widgets/splash_screen_page.dart';
+import 'package:webview/widgets/splash_screen_page.dart';
 
 //TODO -- FIX SAFE AREA FOR ALL SCREEN AND CHECK ANDROID AS WELL
 //TODO -- DELETE ALL UNUSED CODE, AND CHECK ALL PROJECT FOR UNUSED CODE
@@ -20,10 +16,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Al Ain Palace Museum',
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system,
-      home: NavBar(),
+      home: SplashScreenPage(),
     );
   }
 }
